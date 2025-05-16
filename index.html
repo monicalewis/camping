@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camping Packing List Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="trip-details" class="page active">
+            <h1>Camping Trip Details</h1>
+            <form id="trip-form">
+                <div class="form-group">
+                    <h3>Any of these apply?</h3>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="weather" value="rainy"> Rainy</label>
+                        <label><input type="checkbox" name="weather" value="cold"> Cold</label>
+                        <label><input type="checkbox" name="kids" value="yes"> Kids</label>
+                        <label><input type="checkbox" name="bear-country" value="yes"> Bear Country</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>Activities</h3>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="activities" value="cookout"> Cookout</label>
+                        <label><input type="checkbox" name="activities" value="swimming"> Swimming</label>
+                        <label><input type="checkbox" name="activities" value="hiking"> Hiking</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Generate Packing List</button>
+            </form>
+        </div>
+
+        <div id="packing-list" class="page">
+            <h1>Your Packing List</h1>
+            <button id="back-to-form" class="btn">Back to Trip Details</button>
+            <div class="list-controls">
+                <input type="text" id="new-item" placeholder="Add new item...">
+                <button id="add-item" class="btn">Add Item</button>
+                <button id="share-list" class="btn">Share List</button>
+            </div>
+            <div id="list-container"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
